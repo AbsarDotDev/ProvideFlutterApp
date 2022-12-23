@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_app/favorite_app/allitems.dart';
-import 'package:provider_app/favorite_app/favorite_notifer.dart';
+import 'package:provider_app/screens/allitems.dart';
+import 'package:provider_app/providers/favorite_app/favorite_notifer.dart';
 
 void main() {
   runApp(const MyApp());

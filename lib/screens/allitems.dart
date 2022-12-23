@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:provider/provider.dart';
-import 'package:provider_app/favorite_app/allfavorites.dart';
-import 'package:provider_app/favorite_app/favorite_notifer.dart';
+import 'package:provider_app/screens/allfavorites.dart';
+import 'package:provider_app/providers/favorite_app/favorite_notifer.dart';
 
 class AllItems extends StatefulWidget {
   const AllItems({super.key});
