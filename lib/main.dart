@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:provider_app/providers/LoginApp/login_provider.dart';
 import 'package:provider_app/providers/ThemeChange/theme_changer_provider.dart';
-import 'package:provider_app/screens/allitems.dart';
+import 'package:provider_app/screens/FavoriteApp/allitems.dart';
 import 'package:provider_app/providers/favorite_app/favorite_notifer.dart';
-import 'package:provider_app/screens/dark_theme.dart';
+import 'package:provider_app/screens/Login_Proivder_RestAPI/login.dart';
+import 'package:provider_app/screens/ThemeChangeApp/dark_theme.dart';
+import 'package:provider_app/screens/UseStlAsStf/value_notify_listener.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +21,8 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => FavortieItemNotifer()),
-        ChangeNotifierProvider(create: (_) => ThemeChanger())
+        ChangeNotifierProvider(create: (_) => ThemeChanger()),
+        ChangeNotifierProvider(create: (_) => AuthProvider())
       ],
       child: Builder(builder: (context) {
         final themeChanger = Provider.of<ThemeChanger>(context);
@@ -46,7 +50,7 @@ class MyApp extends StatelessWidget {
               bodyText2: TextStyle(fontSize: 14.0, color: Colors.grey[300]),
             ),
           ),
-          home: DarkThemeScreen(),
+          home: LoginScreen(),
         );
       }),
     );
