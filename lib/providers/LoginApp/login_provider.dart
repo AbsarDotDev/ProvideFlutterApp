@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class AuthProvider extends ChangeNotifier {
   bool _isLoading = false;
   bool get isLoading => _isLoading;
-  setLoading(load) {
+  setLoading(bool load) {
     _isLoading = load;
     notifyListeners();
   }
